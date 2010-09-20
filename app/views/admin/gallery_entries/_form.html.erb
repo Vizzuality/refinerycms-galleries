@@ -1,0 +1,34 @@
+<% form_for [:admin, @gallery, @gallery_entry] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @gallery_entry,
+    :include_object_name => true
+  } %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :body -%>
+    <%= f.text_area :body, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :image_id,
+      :image => @gallery_entry.image,
+      :toggle_image_display => false
+    } %>
+  </div>
+
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => true,
+                :delete_title => t('admin.gallery_entries.gallery_entry.delete'),
+                :delete_url => (@gallery_entry.new_record? ? nil : admin_gallery_gallery_entry_url(@gallery, @gallery_entry))
+              } %>
+<% end -%>

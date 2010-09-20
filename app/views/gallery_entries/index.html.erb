@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="gallery_entries">
+    <% @gallery_entries.each do |gallery_entry| %>
+      <li>
+        <%= link_to gallery_entry.name, gallery_entry_url(gallery_entry) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

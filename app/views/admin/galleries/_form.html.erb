@@ -1,0 +1,49 @@
+<% form_for [:admin, @gallery] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @gallery,
+    :include_object_name => true
+  } %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :body -%>
+    <%= f.text_area :body, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.gallery_entries.gallery_entry.delete')
+              } %>
+
+<% end -%>
+
+<h2>Entries</h2>
+
+<% unless @gallery.new_record? %>
+<div id='actions'>
+  <ul>
+    <li>
+      <%= link_to t('admin.gallery_entries.index.create_new'), new_admin_gallery_gallery_entry_url(@gallery),
+                   :class => "add_icon" %>
+    </li>
+  </ul>
+</div>
+
+<div id='records'>
+  <% if @gallery.gallery_entries.any? %>
+    <%= render :partial => "admin/gallery_entries/sortable_list" %>
+  <% else %>
+    <p>
+      <strong>
+        <%= t('admin.gallery_entries.index.no_items_yet') %>
+      </strong>
+    </p>
+  <% end %>
+</div>
+<% end -%>

@@ -1,0 +1,17 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(gallery) -%>">
+  <span class='title'>
+    <%= gallery.name %> (<em><%= pluralize(gallery.gallery_entries.count, t('.image'), t('.images')) %></em>)
+    <span class="preview">&nbsp;</span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag("application_go.png"), gallery_url(gallery),
+        :title => t('.view_live'),
+        :target => "_blank" %>
+    <%= link_to refinery_icon_tag("application_edit.png"), edit_admin_gallery_path(gallery),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), admin_gallery_path(gallery),
+        :method => :delete,
+        :class => "cancel confirm-delete",
+        :title => t('.delete') %>
+  </span>
+</li>

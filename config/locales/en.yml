@@ -1,0 +1,35 @@
+en:
+  plugins:
+    galleries:
+      title: Galleries
+  admin:
+    gallery_entries:
+      index:
+        create_new: Create a new Gallery Entry
+        reorder: Reorder Gallery Entries
+        reorder_done: Done Reordering Gallery Entries
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Gallery Entries yet. Click "Create a new Gallery Entry" to add your first gallery entry.
+      gallery_entry:
+        view_live: View this gallery entry live <br/><em>(opens in a new window)</em>
+        edit: Edit this gallery entry
+        delete: Remove this gallery entry forever
+    galleries:
+      index:
+        create_new: Create a new Gallery
+        reorder: Reorder Galleries
+        reorder_done: Done Reordering Galleies
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Galleries yet. Click "Create a new Gallery" to add your first gallery entry.
+      gallery:
+        image: 'image'
+        images: 'images'
+        view_live: View this gallery live <br/><em>(opens in a new window)</em>
+        edit: Edit this gallery
+        delete: Remove this gallery forever
+  gallery_entries:
+    show:
+      other: Other Gallery Entries
+  galleries:
+    show:
+      other: Other Galleries

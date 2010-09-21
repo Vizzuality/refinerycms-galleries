@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-galleries'
-  s.version           = '0.1'
+  s.version           = '0.2'
   s.description       = 'Ruby on Rails Galleries engine for Refinery CMS'
   s.date              = '2010-09-17'
   s.summary           = 'Ruby on Rails Galleries engine for Refinery CMS'

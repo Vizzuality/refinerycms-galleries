@@ -1,4 +1,4 @@
-<% form_for [:admin, @gallery, @gallery_entry] do |f| -%>
+<%= form_for [:admin, @gallery, @gallery_entry] do |f| -%>
   <%= render :partial => "/shared/admin/error_messages", :locals => {
     :object => @gallery_entry,
     :include_object_name => true

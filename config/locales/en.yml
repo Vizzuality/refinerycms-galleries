@@ -33,3 +33,7 @@ en:
   galleries:
     show:
       other: Other Galleries
+  shared:
+    admin:
+      image_picker:
+        image: "Image"

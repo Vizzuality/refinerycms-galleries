@@ -6,7 +6,7 @@ A plugin for galleries management for [Refinery CMS](http://refinerycms.com/)
 
 Add the following line to your `Gemfile` file:
 
-    gem 'refinerycms-galleries', '= 0.1', :require => 'galleries', :git => 'git://github.com/Vizzuality/refinerycms-galleries.git'
+    gem 'refinerycms-galleries', '= 0.3', :require => 'galleries', :git => 'git://github.com/Vizzuality/refinerycms-galleries.git'
 
 And then run `bundle install`.
 

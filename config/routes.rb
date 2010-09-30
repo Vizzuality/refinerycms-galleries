@@ -7,6 +7,7 @@ Refinery::Application.routes.draw do
     resources :galleries do
       collection do
         post :update_positions
+        get :insert
       end
       resources :gallery_entries do
         collection do

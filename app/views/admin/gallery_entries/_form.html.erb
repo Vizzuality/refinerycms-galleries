@@ -29,6 +29,7 @@
                 :f => f,
                 :continue_editing => true,
                 :delete_title => t('admin.gallery_entries.gallery_entry.delete'),
-                :delete_url => (@gallery_entry.new_record? ? nil : admin_gallery_gallery_entry_url(@gallery, @gallery_entry))
+                :delete_url => (@gallery_entry.new_record? ? nil : admin_gallery_gallery_entry_url(@gallery, @gallery_entry)),
+                :cancel_url => admin_gallery_gallery_entries_url(@gallery)
               } %>
 <% end -%>

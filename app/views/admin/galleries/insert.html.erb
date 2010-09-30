@@ -1,0 +1,24 @@
+<div id='dialog_menu_left'>
+  <% if @galleries.any? %>
+    <span id="existing_image_radio" class="radio selected_radio">
+      <input type='radio' name='image_type' value='existing_image' id='image_type_existing' checked='true' />
+      <label for='image_type_existing' class='stripped'><%=t('.existing_gallery')%></label>
+    </span>
+  <% end %>
+</div>
+
+<div id='dialog_main'>
+  <% if @galleries.any? %>
+    <%= render :partial => "existing_galleries" %>
+  <% else %>
+    <% flash.now[:error] = t('admin.galleries.index.no_images_yet').split('.').first.html_safe + "." %>
+  <% end %>
+</div>
+
+<% content_for :head do %>
+  <script type='text/javascript'>
+    $(document).ready(function(){
+      image_dialog.init(<%= @callback.present? ? "self.parent.#{@callback}" : "null" %>);
+    });
+  </script>
+<% end %>

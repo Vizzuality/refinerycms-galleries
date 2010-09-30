@@ -1,0 +1,31 @@
+<div id='existing_image_area' class='dialog_area'>
+  <input type='hidden' name='selected_gallery' id='selected_gallery' />
+  <div id='existing_image_area_content' class='clearfix'>
+    <ul>
+      <% @galleries.each do |gallery| %>
+        <% image = (gallery && gallery.gallery_entries.any?) ? gallery.gallery_entries.first.image : nil %>
+        <% next unless image %>
+        <li<%= " class='selected'" if @gallery_id == gallery.id %>>
+          <%= image_fu(image, '106x106#c', {
+                         :alt => gallery.name,
+                         :title => gallery.name,
+                         :id => "gallery_#{gallery.id}",
+                         :'data-id' => gallery.id
+                       }) -%>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+
+  <%= will_paginate @galleries, :previous_label => '&laquo; Previous', :next_label => 'Next &raquo;',:renderer => Refinery::LinkRenderer %>
+
+  <%= render :partial => "/shared/admin/form_actions",
+             :locals => {
+               :f => nil,
+               :cancel_url => '',
+               :submit_button_text => t('.button_text'),
+               :hide_cancel => false,
+               :hide_delete => true,
+               :cancel_title => nil
+             } if @app_dialog or @galleries.any? %>
+</div>

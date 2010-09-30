@@ -15,12 +15,17 @@ en:
         edit: Edit this gallery entry
         delete: Remove this gallery entry forever
     galleries:
+      existing_galleries:
+        button_text: "Insert"
+      insert:
+        existing_gallery: Existing gallery
       index:
         create_new: Create a new Gallery
         reorder: Reorder Galleries
         reorder_done: Done Reordering Galleies
         sorry_no_results: Sorry! There are no results found.
         no_items_yet: There are no Galleries yet. Click "Create a new Gallery" to add your first gallery entry.
+        no_images_yet: There are no Galleries yet. You have to create a new Galery to add it to a feature.
       gallery:
         image: 'image'
         images: 'images'

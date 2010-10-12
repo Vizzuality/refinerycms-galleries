@@ -1,0 +1,45 @@
+es:
+  plugins:
+    galleries:
+      title: Galerías
+  admin:
+    gallery_entries:
+      index:
+        create_new: Crear una nueva galería
+        reorder: Reordenar galerías
+        reorder_done: He terminado de reordenar las galerías
+        sorry_no_results: Lo sentimos, no se han encontrado resultados
+        no_items_yet: Aún no hay ninguna galería. Haz click en "Crear nueva galería" para añadir una.
+      gallery_entry:
+        view_live: Ver la galeria en tu web <br/><em>(abre una ventana nueva)</em>
+        edit: Editar la galeria
+        delete: Borrar completamente esta galeria
+    galleries:
+      existing_galleries:
+        button_text: Insertar
+      insert:
+        existing_gallery: Galería existente
+      index:
+        create_new: Crear una nueva galería
+        reorder: Reordenar galerías
+        reorder_done: He terminado de reordenar las galerías
+        sorry_no_results: Lo sentimos, no se han encontrado resultados
+        no_items_yet: Aún no hay ninguna galería. Haz click en "Crear nueva galería" para añadir una.
+        no_images_yet: Aún no hay ninguna galería. Hay que añadir una antes
+      gallery:
+        image: imagen
+        images: imagenes
+        view_live: Ver la galeria en tu web <br/><em>(abre una ventana nueva)</em>
+        edit: Editar la galeria
+        delete: Borrar completamente esta galeria
+  gallery_entries:
+    show:
+      other: Otras galerías
+  galleries:
+    show:
+      other: Otras galerías
+  shared:
+    admin:
+      image_picker:
+        image: Imagen
+

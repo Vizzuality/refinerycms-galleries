@@ -36,7 +36,7 @@
   <ul id="gallery_entries">
     <% @gallery_entries.each do |gallery_entry| %>
       <li>
-        <%= link_to gallery_entry.name, gallery_entry_url(gallery_entry) %>
+        <%= link_to gallery_entry.name, gallery_gallery_entry_url(gallery_entry.gallery,gallery_entry) %>
       </li>
     <% end %>
   </ul>

@@ -34,7 +34,7 @@ es:
         delete: Borrar completamente esta galeria
   gallery_entries:
     show:
-      other: Otras galerías
+      other: Otras imágenes
   galleries:
     show:
       other: Otras galerías

@@ -3,37 +3,32 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  
+
   <div>
     <h3>Name</h3>
     <%= @gallery_entry.name %>
   </div>
-  
+
   <div>
     <h3>Body</h3>
     <%= @gallery_entry.body %>
   </div>
-  
+
   <div>
     <h3>Image</h3>
     <%= image_fu @gallery_entry.image, nil %>
   </div>
-  
+
   <div>
     <h3>Position</h3>
     <%= @gallery_entry.position %>
   </div>
-  
+
   <div>
     <h3>Gallery</h3>
     <%= @gallery_entry.gallery_id %>
   </div>
-  
-  <div>
-    <h3>Container</h3>
-    <%= link_to 'container', @gallery_entry.container.url %>
-  </div>
-  
+
 <% end %>
 
 <% content_for :body_content_right do %>
@@ -48,3 +43,4 @@
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
+

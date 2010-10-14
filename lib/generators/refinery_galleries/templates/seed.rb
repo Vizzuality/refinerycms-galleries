@@ -1,8 +1,9 @@
 User.find(:all).each do |user|
-  user.plugins.create(:name => "galleries",
-                      :position => (user.plugins.maximum(:position) || -1) +1)
+  unless user.plugins.find_by_name('galleries')
+    user.plugins.create(:name => "galleries",
+                        :position => (user.plugins.maximum(:position) || -1) +1)
+  end
 end
-
 page = Page.create(
   :title => "Galleries",
   :link_url => "/galleries",

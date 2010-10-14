@@ -24,6 +24,13 @@
     } %>
   </div>
 
+  <div class="field">
+    <%= f.label :entry_type %>
+    <%= f.select :entry_type, GalleryEntry.types.collect{ |k,v| [k,v] } %>
+  </div>
+
+  <p><em><%= t('.help_video') %></em></p>
+
   <%= render :partial => "/shared/admin/form_actions",
               :locals => {
                 :f => f,

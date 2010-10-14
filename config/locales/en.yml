@@ -14,6 +14,8 @@ en:
         view_live: View this gallery entry live <br/><em>(opens in a new window)</em>
         edit: Edit this gallery entry
         delete: Remove this gallery entry forever
+      form:
+        help_video: 'If you want to add a video, you can add the thumbnail as image, and in the body of the entry, the embed code.'
     galleries:
       existing_galleries:
         button_text: "Insert"
@@ -27,8 +29,10 @@ en:
         no_items_yet: There are no Galleries yet. Click "Create a new Gallery" to add your first gallery entry.
         no_images_yet: There are no Galleries yet. You have to create a new Galery to add it to a feature.
       gallery:
-        image: 'image'
-        images: 'images'
+        video: video
+        videos: videos
+        image: image
+        images: images
         view_live: View this gallery live <br/><em>(opens in a new window)</em>
         edit: Edit this gallery
         delete: Remove this gallery forever

@@ -1,6 +1,6 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(gallery) -%>">
   <span class='title'>
-    <%= gallery.name %> (<em><%= pluralize(gallery.gallery_entries.count, t('.image'), t('.images')) %></em>)
+    <%= gallery.name %> (<em><%= pluralize(gallery.gallery_entries.image.count, t('.image'), t('.images')) %>, <%= pluralize(gallery.gallery_entries.video.count, t('.video'), t('.videos')) %></em>)
     <span class="preview">&nbsp;</span>
   </span>
   <span class='actions'>

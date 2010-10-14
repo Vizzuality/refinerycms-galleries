@@ -12,12 +12,12 @@ class CreateGalleriesGalleryEntries < ActiveRecord::Migration
     add_index :galleries, :id
 
     create_table :gallery_entries do |t|
-      t.string :name
-      t.text :body
+      t.string  :name
+      t.text    :body
       t.integer :image_id
       t.integer :position
       t.integer :gallery_id
-
+      t.integer :entry_type, :default => 0
       t.timestamps
     end
 

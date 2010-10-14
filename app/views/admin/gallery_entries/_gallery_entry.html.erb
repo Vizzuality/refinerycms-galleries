@@ -1,7 +1,7 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(gallery_entry) -%>">
   <span class='title'>
     <%= image_fu gallery_entry.image, :small %>
-    <%= gallery_entry.name %>
+    <%= gallery_entry.name %> (<em><%= GalleryEntry.types.invert[gallery_entry.entry_type] %></em>)
     <span class="preview">&nbsp;</span>
   </span>
   <span class='actions'>

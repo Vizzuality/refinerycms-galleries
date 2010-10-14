@@ -4,6 +4,7 @@ User.find(:all).each do |user|
                         :position => (user.plugins.maximum(:position) || -1) +1)
   end
 end
+
 page = Page.create(
   :title => "Galleries",
   :link_url => "/galleries",
